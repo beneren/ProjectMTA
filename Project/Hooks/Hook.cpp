@@ -419,90 +419,13 @@ void Hooks::InstalClientHook()
         HookCheck = true;
     }
 }
-
-std::string utf8_to_cp1251(const char* str) {
-    std::string res;
-    WCHAR* ures = NULL;
-    char* cres = NULL;
-    int result_u = MultiByteToWideChar(CP_UTF8, 0, str, -1, 0, 0);
-
-    if (result_u != 0) {
-        ures = new WCHAR[result_u];
-        if (MultiByteToWideChar(CP_UTF8, 0, str, -1, ures, result_u)) {
-            int result_c = WideCharToMultiByte(1251, 0, ures, -1, 0, 0, 0, 0);
-            if (result_c != 0) {
-                cres = new char[result_c];
-                if (WideCharToMultiByte(1251, 0, ures, -1, cres, result_c, 0, 0)) {
-                    res = cres;
-                }
-            }
-        }
-    }
-    delete[] ures;
-    delete[] cres;
-    return res;
-}
-
-
-std::string GenerateRandomString(size_t length) {
-    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-    std::string random_string;
-    random_string.reserve(length);
-
-    for (size_t i = 0; i < length; ++i) {
-        random_string += charset[rand() % (sizeof(charset) - 1)];
-    }
-
-    return random_string;
-}
-
-using Serial_Generate4ByteCheckSum_t = unsigned int(__thiscall*)(int*, std::string*);
-Serial_Generate4ByteCheckSum_t Serial_Generate4ByteCheckSum_c = nullptr;
-
-
-unsigned int __fastcall Serial_Generate4ByteCheckSum(int* ECX, int* EDX, std::string* Src)
-{
-    static bool isFirstCall = true;
-    if (isFirstCall)
-    {
-        printf("[Serial::Generate4ByteCheckSum] Old Src: %s", Src);
-        std::string randomValue = GenerateRandomString(15);
-        *Src = randomValue;
-
-        printf("[Serial::Generate4ByteCheckSum] Src: %s", utf8_to_cp1251(Src->c_str()).c_str());
-
-        isFirstCall = false;
-    }
-    return Serial_Generate4ByteCheckSum_c(ECX, Src);
-}
-
 void Hooks::InstallHook()
 {
     MH_Initialize();
     Signature scan;
 
     DWORD Scan_Addres;
-    
-    Scan_Addres = scan.FindPattern(("netc.dll"), ("\x55\x8B\xEC\x6A\x00\x68\x00\x00\x00\x00\x64\xA1\x00\x00\x00\x00\x50\x81\xEC\x00\x00\x00\x00\xA1\x00\x00\x00\x00\x33\xC5\x89\x45\x00\x56\x57\x50\x8D\x45\x00\x64\xA3\x00\x00\x00\x00\x6A\x00\xE8"), ("xxxx?x????xx????xxx????x????xxxx?xxxxx?xx????x?x"));
-    if (Scan_Addres)
-    {
-        //MH_CreateAndEnableHook(Scan_Addres, &Hooked_sub_1003CA70, reinterpret_cast<LPVOID*>(&sub_1003CA70_Original));
-    }
-    else
-    {
-        printf("'Hooked_sub_1003CA70' address not found\n");
-    }
-    Serial_Generate4ByteCheckSum_c = (Serial_Generate4ByteCheckSum_t)scan.FindPattern("netc.dll", "\x55\x8B\xEC\x83\xEC\x00\x53\x56\x8B\x75\x00\x33\xC0\x57", "xxxxx?xxxx?xxx");
-
-    if (Serial_Generate4ByteCheckSum_c)
-    {
-        MH_CreateAndEnableHook((DWORD)Serial_Generate4ByteCheckSum_c, &Serial_Generate4ByteCheckSum, reinterpret_cast<LPVOID*>(&Serial_Generate4ByteCheckSum_c));
-        printf("Spoofer hook initialized successfully.\n");
-    }
-    else
-    {
-        printf("Failed to find spoofer hook address.\n");
-    }
+   
     Scan_Addres = scan.FindPattern(("netc.dll"), ("\x55\x8B\xEC\x50\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\xB8\x00\x00\x00\x00\x58\xFF\x75\x00\xFF\x75"), ("xxxxx????x????x????x????x????x????x????x????x????x????xxx?xx"));
     if (Scan_Addres)
     {
