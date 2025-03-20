@@ -1,0 +1,48 @@
+﻿  Hook.cpp
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Mta_SDK\SharedUtil.Defines.h(137,9): warning C4005: 'SAFE_RELEASE': makro yeniden tanımlama
+  ('Hooks/Hook.cpp' kaynak dosyası derleniyor)
+      C:\Users\Admin\Desktop\GXD\___EA__\Project\D3DHook\d3drender.h(29,9):
+      önceki 'SAFE_RELEASE' tanımına bakın
+  
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Mta_SDK\SharedUtil.Defines.h(139,9): warning C4005: 'PI': makro yeniden tanımlama
+  ('Hooks/Hook.cpp' kaynak dosyası derleniyor)
+      C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\shared\Maths.h(25,9):
+      önceki 'PI' tanımına bakın
+  
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Hooks\Hook.cpp(336,38): warning C4018: '<': işaretli/işaretsiz uyuşmazlığı
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Hooks\Hook.cpp(364,38): warning C4018: '<': işaretli/işaretsiz uyuşmazlığı
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Hooks\Hook.cpp(468,16): warning C4477: 'printf' : '%s' biçim dizesi 'char *' türü bir bağımsız değişken gerektirir, ancak 1 değişen sayıda bağımsız değişkenin türü 'std::string *'
+  ESP.cpp
+C:\Users\Admin\Desktop\GXD\___EA__\Project\IDA\defs.h(114,9): warning C4005: 'LOBYTE': makro yeniden tanımlama
+  ('Visuals/ESP.cpp' kaynak dosyası derleniyor)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(206,9):
+      önceki 'LOBYTE' tanımına bakın
+  
+C:\Users\Admin\Desktop\GXD\___EA__\Project\IDA\defs.h(115,9): warning C4005: 'LOWORD': makro yeniden tanımlama
+  ('Visuals/ESP.cpp' kaynak dosyası derleniyor)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(204,9):
+      önceki 'LOWORD' tanımına bakın
+  
+C:\Users\Admin\Desktop\GXD\___EA__\Project\IDA\defs.h(117,9): warning C4005: 'HIBYTE': makro yeniden tanımlama
+  ('Visuals/ESP.cpp' kaynak dosyası derleniyor)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(207,9):
+      önceki 'HIBYTE' tanımına bakın
+  
+C:\Users\Admin\Desktop\GXD\___EA__\Project\IDA\defs.h(118,9): warning C4005: 'HIWORD': makro yeniden tanımlama
+  ('Visuals/ESP.cpp' kaynak dosyası derleniyor)
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\minwindef.h(205,9):
+      önceki 'HIWORD' tanımına bakın
+  
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Visuals\ESP.cpp(146,13): warning C4244: '=': 'double' - 'float' dönüşümü; veri kaybı olabilir
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Visuals\ESP.cpp(304,18): warning C4305: 'başlatılıyor': 'double' iken 'float' olarak kesildi
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Visuals\ESP.cpp(421,18): warning C4244: 'başlatılıyor': 'double' - 'float' dönüşümü; veri kaybı olabilir
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Visuals\ESP.cpp(422,19): warning C4244: 'başlatılıyor': 'double' - 'float' dönüşümü; veri kaybı olabilir
+  Kod Üretiliyor...
+C:\Users\Admin\Desktop\GXD\___EA__\Project\Visuals\ESP.cpp(159,1): warning C4715: 'GetTotalClientEntities': tüm denetim yolları değer döndürmez
+  plugin.lib(CVector.obj) : /GL ile derlenmiş MSIL .netmodule veya modül bulundu; bağlantı /LTCG ile yeniden başlatılıyor; bağlayıcı performansını artırmak için bağlantı komut satırına /LTCG ekleyin
+  Kod üretiliyor
+  Kodun üretilmesi tamamlandı
+detours.lib(detours.obj) : warning LNK4099: PDB '', 'detours.lib(detours.obj)' ile veya '' üzerinde bulunamadı; nesne, hata ayıklama bilgileri yokmuş gibi bağlanıyor
+detours.lib(modules.obj) : warning LNK4099: PDB '', 'detours.lib(modules.obj)' ile veya '' üzerinde bulunamadı; nesne, hata ayıklama bilgileri yokmuş gibi bağlanıyor
+detours.lib(disasm.obj) : warning LNK4099: PDB '', 'detours.lib(disasm.obj)' ile veya '' üzerinde bulunamadı; nesne, hata ayıklama bilgileri yokmuş gibi bağlanıyor
+  Project.vcxproj -> C:\Users\Admin\Desktop\GXD\___EA__\Release\Project.dll

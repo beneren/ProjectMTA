@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{1BEE4DC0-CB8D-4D7E-BD98-96370403F22D}</ProjectGuid>
+    <RootNamespace>project jett</RootNamespace>
+    <ProjectName>Project</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.dll</TargetExt>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.asi</TargetExt>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.asi</TargetExt>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.asi</TargetExt>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_USE_MATH_DEFINES;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\plugin_sa\game_sa\rw;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\plugin_sa\game_sa;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\plugin_sa;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\shared\game;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\shared</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\shared\bass;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\output\lib;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <OmitFramePointers>false</OmitFramePointers>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;_USE_MATH_DEFINES;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_CRT_NON_CONFORMING_SWPRINTFS;_USE_MATH_DEFINES;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;NDEBUG;GTASA;PLUGIN_SGV_10US;RW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\plugin_sa\game_sa\rw;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\plugin_sa\game_sa;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\plugin_sa;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\shared\game;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\shared</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\shared\bass;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\output\lib;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\shared\bass;C:\Users\Admin\Desktop\GXD\PLUGIN - SDK\output\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>plugin.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Aimbot\SilentAim.cpp" />
+    <ClCompile Include="CallHook\ccallhook.cpp" />
+    <ClCompile Include="CallHook\cshortasm.cpp" />
+    <ClCompile Include="CallHook\memsafe.cpp" />
+    <ClCompile Include="D3DHook\d3dhook.cpp" />
+    <ClCompile Include="D3DHook\d3drender.cpp" />
+    <ClCompile Include="GTA_Functions\GTA_Functions.cpp" />
+    <ClCompile Include="Hooks\FindSignature.cpp" />
+    <ClCompile Include="Hooks\Hook.cpp" />
+    <ClCompile Include="ImGuı\imgui.cpp" />
+    <ClCompile Include="ImGuı\imgui_demo.cpp" />
+    <ClCompile Include="ImGuı\imgui_draw.cpp" />
+    <ClCompile Include="ImGuı\imgui_impl_dx9.cpp" />
+    <ClCompile Include="ImGuı\imgui_impl_win32.cpp" />
+    <ClCompile Include="ImGuı\imgui_tables.cpp" />
+    <ClCompile Include="ImGuı\imgui_widgets.cpp" />
+    <ClCompile Include="ImGuı\TextEditor.cpp" />
+    <ClCompile Include="Main\main.cpp" />
+    <ClCompile Include="Menu\Menu.cpp" />
+    <ClCompile Include="RakNet\BitStream.cpp" />
+    <ClCompile Include="RakNet\HookedRakClient.cpp" />
+    <ClCompile Include="RakNet\RakClient.cpp" />
+    <ClCompile Include="Visuals\ESP.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aimbot\SilentAim.h" />
+    <ClInclude Include="CallHook\callfunc.hpp" />
+    <ClInclude Include="CallHook\ccallhook.h" />
+    <ClInclude Include="CallHook\cshortasm.h" />
+    <ClInclude Include="CallHook\fn2void.hpp" />
+    <ClInclude Include="CallHook\memsafe.h" />
+    <ClInclude Include="D3DHook\d3dhook.h" />
+    <ClInclude Include="D3DHook\d3drender.h" />
+    <ClInclude Include="GTA_Functions\GTA_Functions.h" />
+    <ClInclude Include="Hooks\FindSignature.h" />
+    <ClInclude Include="Hooks\Hook.h" />
+    <ClInclude Include="IDA\defs.h" />
+    <ClInclude Include="ImGuı\imconfig.h" />
+    <ClInclude Include="ImGuı\imgui.h" />
+    <ClInclude Include="ImGuı\imgui_impl_dx9.h" />
+    <ClInclude Include="ImGuı\imgui_impl_win32.h" />
+    <ClInclude Include="ImGuı\imgui_internal.h" />
+    <ClInclude Include="ImGuı\imstb_rectpack.h" />
+    <ClInclude Include="ImGuı\imstb_textedit.h" />
+    <ClInclude Include="ImGuı\imstb_truetype.h" />
+    <ClInclude Include="ImGuı\TextEditor.h" />
+    <ClInclude Include="Librarys\detours.h" />
+    <ClInclude Include="Librarys\MinHook.h" />
+    <ClInclude Include="Main\main.h" />
+    <ClInclude Include="Memory\xorstr.hpp" />
+    <ClInclude Include="Menu\Menu.h" />
+    <ClInclude Include="Mta_SDK\CDuplicateLineFilter.h" />
+    <ClInclude Include="Mta_SDK\CFastList.h" />
+    <ClInclude Include="Mta_SDK\CMtaVersion.h" />
+    <ClInclude Include="Mta_SDK\Common.h" />
+    <ClInclude Include="Mta_SDK\core\CExceptionInformation.h" />
+    <ClInclude Include="Mta_SDK\core\CModManager.h" />
+    <ClInclude Include="Mta_SDK\core\CServerInterface.h" />
+    <ClInclude Include="Mta_SDK\MTAPlatform.h" />
+    <ClInclude Include="Mta_SDK\network\CNet.h" />
+    <ClInclude Include="Mta_SDK\net\bitstream.h" />
+    <ClInclude Include="Mta_SDK\net\CNetHTTPDownloadManagerInterface.h" />
+    <ClInclude Include="Mta_SDK\net\CNetServer.h" />
+    <ClInclude Include="Mta_SDK\net\ns_common.h" />
+    <ClInclude Include="Mta_SDK\net\ns_playerid.h" />
+    <ClInclude Include="Mta_SDK\net\packetenums.h" />
+    <ClInclude Include="Mta_SDK\net\Packets.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.AllocTracking.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.AllocTracking.hpp" />
+    <ClInclude Include="Mta_SDK\SharedUtil.AsyncTaskScheduler.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.AsyncTaskScheduler.hpp" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Buffer.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.ClassIdent.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Defines.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.File.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.File.hpp" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Game.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Game.hpp" />
+    <ClInclude Include="Mta_SDK\SharedUtil.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Hash.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Hash.hpp" />
+    <ClInclude Include="Mta_SDK\SharedUtil.IntTypes.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Legacy.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Logging.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Logging.hpp" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Map.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Math.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Misc.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Profiling.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Profiling.hpp" />
+    <ClInclude Include="Mta_SDK\SharedUtil.ThreadPool.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Time.h" />
+    <ClInclude Include="Mta_SDK\SharedUtil.Time.hpp" />
+    <ClInclude Include="Mta_SDK\SString.h" />
+    <ClInclude Include="Mta_SDK\SString.hpp" />
+    <ClInclude Include="Mta_SDK\WString.h" />
+    <ClInclude Include="Mta_SDK\WString.hpp" />
+    <ClInclude Include="Mta_SDK\xml\CXML.h" />
+    <ClInclude Include="RakNet\BitStream.h" />
+    <ClInclude Include="RakNet\HookedRakClient.h" />
+    <ClInclude Include="RakNet\RakClient.h" />
+    <ClInclude Include="Visuals\CClientEntity.h" />
+    <ClInclude Include="Visuals\ESP.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Librarys\detours.lib" />
+    <Library Include="Librarys\libMinHook.x86.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
